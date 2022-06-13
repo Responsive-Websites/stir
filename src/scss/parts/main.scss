@@ -1,1 +1,237 @@
 //main
+.main {
+  &__preview {
+  }
+}
+.preview {
+  &__container {
+  }
+
+  &__content {
+    margin-top: 114px;
+    @media screen and (max-width: $md-4) {
+      margin-top: 104px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 94px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 60px;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 106%;
+
+    text-align: center;
+    max-width: 825px;
+    margin: 0 auto;
+    @media screen and (max-width: $md-4) {
+      font-size: 58px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 52px;
+      max-width: 625px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    max-width: 613px;
+
+    margin: 34px auto 0 auto;
+
+    @media screen and (max-width: $md-4) {
+      margin-top: 30px;
+      font-size: 18px;
+      max-width: 543px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 28px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    max-width: 478px;
+    margin: 40px auto 0px auto;
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #7352ff;
+    border-radius: 19.9872px;
+    min-height: 56px;
+    position: relative;
+    background-color: $color-white;
+    @media screen and (max-width: $md-4) {
+      margin-top: 35px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 30px;
+    }
+    & input {
+      flex: 1 1 auto;
+      padding: 20px 171px 20px 31px;
+      border-radius: 19.9872px;
+      font-size: 12px;
+      line-height: calc(14 / 12);
+      color: $color-black;
+      &::placeholder {
+        color: $color-black;
+        opacity: 1;
+      }
+      @media screen and (max-width: $md-2) {
+        padding: 20px 131px 20px 31px;
+      }
+    }
+    & button {
+      @include button-form($color-white, $color-purple, $color-white, $color-orange, $color-purple, $color-green);
+      position: absolute;
+      top: -1px;
+      right: -1.5px;
+      @media screen and (max-width: $md-2) {
+        padding: 21px 25px;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $color-purple;
+      border-radius: 19.9872px;
+      opacity: 0;
+      transition: all 2s linear;
+      z-index: -1;
+    }
+    &:before {
+      transform: scale(1);
+      animation: pulse 2s infinite linear;
+    }
+    &:after {
+      animation: pulse 2s 1s infinite linear;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.4);
+        opacity: 0;
+      }
+      33% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.05);
+        opacity: 0;
+      }
+    }
+  }
+  &__slider {
+    // margin: 153px auto 0px auto;
+    margin-top: 153px;
+    width: 1600px;
+    height: 264px;
+    &.swiper {
+      overflow: visible;
+    }
+  }
+}
+.slider-preview {
+  &__inner {
+    // display: flex;
+    // justify-content: center;
+  }
+
+  &__slide {
+    position: relative;
+    width: 264px;
+    height: 264px;
+    margin: 0px 28px;
+    flex: 0 0 264px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__info {
+    background: #ffffff;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 3.99744px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 250%;
+    padding: 1px 12px;
+
+    position: absolute;
+    top: -25px;
+    left: -25px;
+
+    &_reverse {
+      top: auto;
+      left: auto;
+      bottom: 55px;
+      right: -20px;
+    }
+  }
+
+  &__name {
+    border-bottom: 1px solid #f7f2e4;
+  }
+
+  &__job {
+  }
+
+  &__social {
+    background: #ffffff;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 3.99744px;
+
+    padding: 4px 12px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 55px;
+    right: -20px;
+
+    &_reverse {
+      top: 55px;
+      left: -25px;
+      bottom: auto;
+      right: auto;
+    }
+  }
+
+  &__icon {
+    margin: 6px 0px;
+    & img {
+      width: 28px;
+    }
+    transition: all 0.1s linear 0s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

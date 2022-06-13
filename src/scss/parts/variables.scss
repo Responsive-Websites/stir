@@ -27,3 +27,38 @@ $md-2: 480px;
 $md-3: 768px;
 $md-4: 1024px;
 $md-5: 1920px;
+
+//buttons
+
+@mixin button-form(
+  $font-color,
+  $back-color,
+  $font-color-hover,
+  $back-color-hover,
+  $font-color-active,
+  $back-color-active
+) {
+  padding: 21px 45px;
+
+  border-radius: 19.9872px;
+  background-color: $back-color;
+  color: $font-color;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease 0s;
+
+  @media screen and (min-width: $md-2) {
+    &:hover {
+      color: $font-color-hover;
+      background: $back-color-hover;
+    }
+  }
+  &:active {
+    color: $font-color-active;
+    background: $back-color-active;
+  }
+}

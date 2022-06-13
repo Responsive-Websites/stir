@@ -1,1 +1,34 @@
 //header
+.header {
+  background-color: $color-white;
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0px;
+  }
+
+  &__logo {
+    flex: 0 1 50%;
+  }
+
+  &__join {
+    flex: 0 1 50%;
+    text-align: right;
+  }
+
+  &__join-text {
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #222222;
+
+    @media screen and (max-width: $md-2) {
+      padding-right: 0px;
+    }
+  }
+}
