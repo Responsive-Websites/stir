@@ -1,13 +1,6 @@
 //main
 .main {
   &__preview {
-  }
-}
-.preview {
-  &__container {
-  }
-
-  &__content {
     margin-top: 114px;
     @media screen and (max-width: $md-4) {
       margin-top: 104px;
@@ -18,6 +11,30 @@
     @media screen and (max-width: $md-2) {
       margin-top: 60px;
     }
+  }
+  &__community {
+    margin-top: -60px;
+    padding: 236px 0px 140px 0px;
+
+    @media screen and (max-width: $md-4) {
+      padding: 206px 0px 120px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      padding: 186px 0px 80px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      padding: 86px 0px 60px 0px;
+      margin-top: -20px;
+    }
+  }
+}
+
+//preview
+.preview {
+  &__container {
+  }
+
+  &__content {
   }
 
   &__title {
@@ -274,5 +291,210 @@
     &:hover {
       transform: scale(1.1);
     }
+  }
+}
+
+//community
+.community {
+  background-color: $color-font-black;
+  &__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    color: $color-white;
+    max-width: 555px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    @media screen and (max-width: $md-4) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 30px;
+      max-width: 365px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 25px;
+      max-width: 365px;
+    }
+  }
+
+  &__slider {
+    margin: 102px 0px 0px 0px;
+    @media screen and (max-width: $md-4) {
+      margin: 82px 0px 0px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin: 72px 0px 0px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin: 62px 0px 0px 0px;
+    }
+  }
+
+  &__featured {
+    margin: 100px 0px 0px 0px;
+    text-align: center;
+    @media screen and (max-width: $md-4) {
+      margin: 82px 0px 0px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin: 72px 0px 0px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin: 62px 0px 0px 0px;
+    }
+  }
+
+  &__featured-title {
+    max-width: 300px;
+    margin: 0 auto;
+
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.559642px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    @media screen and (max-width: 370px) {
+      font-size: 12px;
+    }
+  }
+
+  &__featured-items {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 370px) {
+      margin-top: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__featured-item {
+    padding: 20px 20px;
+    max-width: 140px;
+    width: 100%;
+    cursor: pointer;
+
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+      transform: scale(1.6);
+    }
+    @keyframes scale-feature {
+      0% {
+        transform: scale(1);
+      }
+      33% {
+        transform: scale(1.6);
+      }
+      66% {
+        transform: scale(1.6);
+      }
+    }
+    @media screen and (max-width: 370px) {
+      animation-name: scale-feature;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-delay: 1s;
+      &:first-child {
+        animation-delay: 0s;
+      }
+      &:last-child {
+        animation-delay: 2s;
+      }
+    }
+  }
+}
+.slider-community {
+  max-width: 752px;
+
+  &.swiper {
+    overflow: visible;
+  }
+  &__inner {
+  }
+
+  &__slide {
+    max-width: 752px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 101.5%;
+      width: 96.5%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid $color-white;
+      border-radius: 3.99744px;
+    }
+    transition: scale 0.5s ease 0s;
+    &.swiper-slide {
+      transform: scale(0.909) !important;
+    }
+    &.swiper-slide-active {
+      transform: scale(1) !important;
+    }
+    // &.swiper-slide-prev {
+    //   transform: scale(0.909) !important;
+    // }
+    // &.swiper-slide-next {
+
+    // }
+  }
+
+  &__image {
+    padding-bottom: 57%;
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    color: $color-white;
+    font-size: 10px;
+    line-height: 140%;
+    &.swiper-pagination {
+      text-align: left;
+    }
+    &.swiper-pagination-fraction {
+      left: 30px;
+    }
+  }
+
+  &__control {
+    margin-top: 82px;
+    display: flex;
+    justify-content: center;
+    & img {
+      padding: 10px;
+      margin: 0 6px;
+      cursor: pointer;
+      transition: all 0.5s ease 0s;
+
+      &:hover {
+        transform: scale(0.9);
+      }
+      &:active {
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  &__control-preview {
+  }
+
+  &__control-next {
   }
 }

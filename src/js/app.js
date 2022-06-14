@@ -246,3 +246,27 @@ let swiperPreview = new Swiper('.preview__slider', {
     },
   },
 });
+
+let swiperCommunity = new Swiper('.community__slider', {
+  speed: 700,
+  slidesPerView: 1,
+  initialSlide: 1,
+  slideToClickedSlide: true,
+  spaceBetween: 40,
+  pagination: {
+    el: '.slider-community__pagination',
+    type: 'fraction',
+    renderFraction: function (currentClass, totalClass) {
+      return 'Slide <span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+    },
+  },
+  breakpoints: {
+    480: {
+      grabCursor: true,
+    },
+  },
+  navigation: {
+    nextEl: '.slider-community__control-next',
+    prevEl: '.slider-community__control-preview',
+  },
+});
