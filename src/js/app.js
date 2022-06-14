@@ -227,9 +227,22 @@ ibg();
 // =========================================================
 
 let swiperPreview = new Swiper('.preview__slider', {
-  speed: 200,
+  speed: 700,
   loop: true,
-  slidesPerView: 5,
-  centeredSlides: true,
+  slidesPerView: 1,
+  loopAdditionalSlides: 10,
+
   slideToClickedSlide: true,
+  spaceBetween: 56,
+  initialSlide: 2,
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,
+  },
+  breakpoints: {
+    480: {
+      grabCursor: true,
+    },
+  },
 });
