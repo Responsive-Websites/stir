@@ -39,5 +39,25 @@ main {
   visibility: hidden;
 }
 
-.swiper {
+.heading-button {
+  background: #ffffff;
+  border-radius: 63.959px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  min-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  &__icon {
+    max-width: 24px;
+    margin-right: 8px;
+  }
+
+  &__value {
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: $color-purple;
+  }
 }

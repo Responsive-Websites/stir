@@ -3,6 +3,26 @@
 
 // 'use strict';
 
+// detect block view
+
+const detectBusinessBlock = document.querySelector('.business__title');
+
+document.addEventListener('scroll', function () {
+  const posTop = detectBusinessBlock.getBoundingClientRect().top;
+
+  // Блок достиг верхней границы экрана (или выше)
+  // elem.classList.toggle('visible', posTop <= 0);
+
+  // Блок только появляется снизу (или выше)
+  // elem.classList.toggle('visible', posTop < window.innerHeight);
+
+  // Блок целиком находится в видимой зоне
+  detectBusinessBlock.classList.toggle(
+    'business__title_active',
+    posTop + detectBusinessBlock.clientHeight <= window.innerHeight && posTop >= 0
+  );
+});
+
 // burger
 
 // let header_menu = document.querySelector('.menu__body');
@@ -263,6 +283,7 @@ let swiperCommunity = new Swiper('.community__slider', {
   breakpoints: {
     480: {
       grabCursor: true,
+      spaceBetween: 20,
     },
   },
   navigation: {
