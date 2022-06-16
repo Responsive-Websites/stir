@@ -39,6 +39,8 @@ main {
   visibility: hidden;
 }
 
+//headings
+
 .heading-button {
   background: #ffffff;
   border-radius: 63.959px;
@@ -59,5 +61,156 @@ main {
     line-height: 140%;
     text-align: center;
     color: $color-purple;
+  }
+
+  //types
+  &_green {
+    background-color: $color-green;
+    & p {
+      font-weight: 700;
+      color: $color-grey;
+    }
+  }
+  &_purple {
+    background-color: $color-white;
+    & p {
+      font-weight: 400;
+      color: $color-purple;
+    }
+  }
+}
+
+.heading-type {
+  text-align: center;
+  &__button {
+  }
+
+  &__sub-title {
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    margin-top: 31px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: $md-4) {
+      margin-top: 27px;
+      font-size: 20px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 25px;
+      font-size: 18px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    &_green {
+      color: $color-green;
+      max-width: 275px;
+    }
+    &_purple {
+      color: $color-purple;
+      max-width: 336px;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 106%;
+    text-align: center;
+    margin-top: 16px;
+    max-width: 797px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $md-4) {
+      font-size: 52px;
+      max-width: 650px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 40px;
+      max-width: 530px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 12px;
+      font-size: 30px;
+      max-width: 442px;
+    }
+
+    &_white {
+      margin-top: 8px;
+      max-width: 930px;
+      margin-left: auto;
+      margin-right: auto;
+      color: $color-white;
+    }
+  }
+}
+
+//cards-info
+.cards-info {
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0px -10px;
+  }
+
+  &__card {
+    margin: 10px;
+    flex: 0 1 48.35%;
+
+    background: $color-black-sub;
+    border-radius: 16px;
+
+    min-height: 633px;
+
+    position: relative;
+
+    @media screen and (max-width: 1222px) {
+      // flex: 1 1 38%;
+    }
+  }
+  &__content {
+    padding: 48px 48px 48px 48px;
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-green;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 218%;
+    color: $color-white;
+
+    margin-top: 11px;
+    &_big {
+      font-size: 14px;
+      line-height: 171%;
+    }
+  }
+
+  &__image {
+    max-width: 322px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    & img {
+      width: 100%;
+    }
+
+    &_bottom-middle {
+      bottom: 48px;
+    }
+    &_center {
+      bottom: 150px;
+    }
   }
 }

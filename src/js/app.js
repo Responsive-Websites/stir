@@ -23,6 +23,22 @@ document.addEventListener('scroll', function () {
   );
 });
 
+// revenue-breakdown show help for mobile
+let revenueHelpMobile = document.querySelector('._revenue-breakdown-mobile');
+let revenueHelp = document.querySelector('.organized__revenue'),
+  cur = revenueHelp.scrollLeft || 0,
+  event = function (e) {
+    if (e.currentTarget.scrollLeft !== cur) {
+      revenueHelpMobile.style = 'opacity: 0; visibility: hidden;';
+      revenueHelp.removeEventListener('scroll', event);
+    }
+  };
+
+revenueHelp.addEventListener('scroll', event);
+
+// revenueHelp.addEventListener('click', function (e) {
+//   revenueHelp.classList.remove('_revenue-breakdown-mobile');
+// });
 // burger
 
 // let header_menu = document.querySelector('.menu__body');
