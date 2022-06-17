@@ -160,7 +160,7 @@ main {
 
   &__card {
     margin: 10px;
-    flex: 0 1 48.35%;
+    flex: 0 1 587px;
 
     background: $color-black-sub;
     border-radius: 16px;
@@ -169,12 +169,33 @@ main {
 
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+    padding: 0px 48px 0px 48px;
     @media screen and (max-width: 1222px) {
-      // flex: 1 1 38%;
+      flex: 1 1 400px;
+    }
+    @media screen and (max-width: $md-4) {
+      min-height: auto;
+      flex: 1 1 360px;
+    }
+    @media screen and (max-width: $md-4) {
+      padding: 0px 38px 0px 38px;
+    }
+    @media screen and (max-width: 460px) {
+      padding: 0px 30px 0px 30px;
     }
   }
   &__content {
-    padding: 48px 48px 48px 48px;
+    padding: 48px 0px 48px 0px;
+    flex: 1 1 auto;
+
+    @media screen and (max-width: $md-4) {
+      padding: 38px 0px 38px 0px;
+    }
+    @media screen and (max-width: 460px) {
+      padding: 30px 0px 30px 0px;
+    }
   }
   &__title {
     font-size: 20px;
@@ -193,24 +214,30 @@ main {
       font-size: 14px;
       line-height: 171%;
     }
+    @media screen and (max-width: $md-4) {
+      font-size: 14px;
+      line-height: 171%;
+    }
   }
 
   &__image {
     max-width: 322px;
+    margin-left: auto;
+    margin-right: auto;
 
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
     & img {
       width: 100%;
     }
 
     &_bottom-middle {
-      bottom: 48px;
+      margin-bottom: 48px;
     }
     &_center {
-      bottom: 150px;
+      margin-bottom: 150px;
+
+      @media screen and (max-width: 769px) {
+        margin-bottom: 50px;
+      }
     }
   }
 }

@@ -253,14 +253,49 @@ main {
 }
 .cards-info__card {
   margin: 10px;
-  flex: 0 1 48.35%;
+  flex: 0 1 587px;
   background: #1d1d1d;
   border-radius: 16px;
   min-height: 633px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 48px 0px 48px;
+}
+@media screen and (max-width: 1222px) {
+  .cards-info__card {
+    flex: 1 1 400px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cards-info__card {
+    min-height: auto;
+    flex: 1 1 360px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cards-info__card {
+    padding: 0px 38px 0px 38px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cards-info__card {
+    padding: 0px 30px 0px 30px;
+  }
 }
 .cards-info__content {
-  padding: 48px 48px 48px 48px;
+  padding: 48px 0px 48px 0px;
+  flex: 1 1 auto;
+}
+@media screen and (max-width: 1024px) {
+  .cards-info__content {
+    padding: 38px 0px 38px 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cards-info__content {
+    padding: 30px 0px 30px 0px;
+  }
 }
 .cards-info__title {
   font-size: 20px;
@@ -278,21 +313,30 @@ main {
   font-size: 14px;
   line-height: 171%;
 }
+@media screen and (max-width: 1024px) {
+  .cards-info__text {
+    font-size: 14px;
+    line-height: 171%;
+  }
+}
 .cards-info__image {
   max-width: 322px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  margin-left: auto;
+  margin-right: auto;
 }
 .cards-info__image img {
   width: 100%;
 }
 .cards-info__image_bottom-middle {
-  bottom: 48px;
+  margin-bottom: 48px;
 }
 .cards-info__image_center {
-  bottom: 150px;
+  margin-bottom: 150px;
+}
+@media screen and (max-width: 769px) {
+  .cards-info__image_center {
+    margin-bottom: 50px;
+  }
 }
 
 .header {
@@ -1437,4 +1481,19 @@ main {
 
 .payments__content {
   margin-top: 150px;
+}
+@media screen and (max-width: 1024px) {
+  .payments__content {
+    margin-top: 110px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .payments__content {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payments__content {
+    margin-top: 60px;
+  }
 }

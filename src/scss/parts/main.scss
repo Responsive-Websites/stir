@@ -1066,6 +1066,15 @@
 
   &__content {
     margin-top: 150px;
+    @media screen and (max-width: $md-4) {
+      margin-top: 110px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 90px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 60px;
+    }
   }
 
   &__info {
