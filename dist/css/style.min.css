@@ -339,6 +339,192 @@ main {
   }
 }
 
+.info-map {
+  display: flex;
+}
+@media screen and (max-width: 580px) {
+  .info-map {
+    flex-wrap: wrap;
+  }
+}
+.info-map__getting-started {
+  flex: 0 1 508px;
+  margin: 0px 40px;
+}
+@media screen and (max-width: 1024px) {
+  .info-map__getting-started {
+    margin: 0px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info-map__getting-started {
+    margin: 0px 10px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .info-map__getting-started {
+    flex: 1 1 508px;
+    margin: 0px 0px;
+    text-align: center;
+  }
+}
+.info-map__title {
+  font-size: 40px;
+  line-height: 120%;
+  color: #ffffff;
+  max-width: 314px;
+}
+@media screen and (max-width: 1024px) {
+  .info-map__title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info-map__title {
+    font-size: 26px;
+    max-width: 214px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .info-map__title {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info-map__title {
+    font-size: 24px;
+  }
+}
+.info-map__work-link {
+  margin-top: 21px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 140%;
+  color: #6ee4b5;
+  padding: 10px 50px 10px 0px;
+  background: url("../../img/payments/icons/arrow-right.svg") right center no-repeat;
+  transition: all 0.5s ease 0s;
+}
+@media screen and (min-width: 480px) {
+  .info-map__work-link:hover {
+    padding-right: 35px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .info-map__work-link:hover {
+    padding-right: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .info-map__work-link {
+    font-size: 18px;
+    margin-top: 15px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info-map__work-link {
+    font-size: 16px;
+    padding-right: 30px;
+    margin-top: 10px;
+  }
+}
+.info-map__links {
+  flex: 0 1 508px;
+  margin: 0px 40px;
+  padding: 8px 0px 12px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .info-map__links {
+    margin: 0px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info-map__links {
+    margin: 0px 10px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .info-map__links {
+    margin: 0px 0px;
+    flex: 1 1 508px;
+    margin-top: 30px;
+    padding-left: 60px;
+    position: relative;
+  }
+  .info-map__links::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    background-color: #ffffff;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info-map__links {
+    padding: 0px 0px 0px 40px;
+  }
+  .info-map__links::before {
+    left: 10px;
+  }
+}
+.info-map__link {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 150%;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+.info-map__link:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 1024px) {
+  .info-map__link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.info-map__link:first-child {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .info-map__link:first-child {
+    margin-bottom: 22px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .info-map__link::before {
+    transition: all 0.5s ease 0s;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 2;
+  }
+}
+.info-map__link:hover::before {
+  left: 0;
+}
+@media screen and (max-width: 1024px) {
+  .info-map__link {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info-map__link {
+    font-size: 18px;
+  }
+}
+
 .header {
   background-color: #ffffff;
 }
@@ -1495,5 +1681,26 @@ main {
 @media screen and (max-width: 480px) {
   .payments__content {
     margin-top: 60px;
+  }
+}
+.payments__info {
+  margin-top: 110px;
+  max-width: 1178px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1024px) {
+  .payments__info {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .payments__info {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .payments__info {
+    margin-top: 40px;
   }
 }

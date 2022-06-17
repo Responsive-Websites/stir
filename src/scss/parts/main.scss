@@ -1078,5 +1078,19 @@
   }
 
   &__info {
+    margin-top: 110px;
+    max-width: 1178px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $md-4) {
+      margin-top: 80px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 60px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 40px;
+    }
   }
 }
