@@ -1,15 +1,17 @@
 //main
 .main {
+  background-color: $color-white;
   &__preview {
-    margin-top: 114px;
+    padding-top: 114px;
+    background-color: $color-white;
     @media screen and (max-width: $md-4) {
-      margin-top: 104px;
+      padding-top: 104px;
     }
     @media screen and (max-width: $md-3) {
-      margin-top: 94px;
+      padding-top: 94px;
     }
     @media screen and (max-width: $md-2) {
-      margin-top: 60px;
+      padding-top: 60px;
     }
   }
   &__community {
@@ -29,6 +31,7 @@
   }
   &__business {
     padding: 199px 0px 249px 0px;
+    background-color: $color-white;
     @media screen and (max-width: $md-4) {
       padding: 169px 0px 209px 0px;
     }
@@ -56,6 +59,19 @@
     padding: 160px 0px;
     background-color: $color-font-black;
 
+    @media screen and (max-width: $md-4) {
+      padding: 120px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      padding: 80px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      padding: 50px 0px;
+    }
+  }
+  &__splits {
+    padding: 164px 0px;
+    background-color: $color-white;
     @media screen and (max-width: $md-4) {
       padding: 120px 0px;
     }
@@ -127,6 +143,7 @@
     border-radius: 19.9872px;
     min-height: 56px;
     position: relative;
+    z-index: 1;
     background-color: $color-white;
     @media screen and (max-width: $md-4) {
       margin-top: 35px;
@@ -423,8 +440,10 @@
 
     transition: all 0.5s ease 0s;
 
-    &:hover {
-      transform: scale(1.6);
+    @media screen and (min-width: 430px) {
+      &:hover {
+        transform: scale(1.6);
+      }
     }
     @keyframes scale-feature {
       0% {
@@ -1094,6 +1113,144 @@
     }
     @media screen and (max-width: $md-2) {
       margin-top: 40px;
+    }
+  }
+}
+
+//splits
+.splits {
+  &__container {
+  }
+
+  &__heading {
+    padding-bottom: 55px;
+    background: url('../../img/splits/icons/arrows-back.svg') bottom center / 100% no-repeat;
+
+    transition: all 0.5s ease 0s;
+
+    @media screen and (min-width: $md-2) {
+      &:hover {
+        background-size: 90%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      padding-bottom: 30px;
+    }
+    @media screen and (max-width: 400px) {
+      background: none;
+      padding-bottom: 0px;
+    }
+  }
+  &__content {
+    margin-top: 144px;
+    display: flex;
+    align-items: flex-start;
+    @media screen and (max-width: $md-4) {
+      margin-top: 110px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 40px;
+
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 40px;
+    }
+    @media screen and (max-width: 380px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__about {
+    flex: 0 1 440px;
+    margin-right: 122px;
+
+    @media screen and (max-width: $md-4) {
+      margin-right: 80px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-right: 0px;
+
+      margin-top: 60px;
+      flex: 0 1 auto;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 0px;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    max-width: 434px;
+    @media screen and (max-width: $md-4) {
+      font-size: 20px;
+      max-width: 360px;
+    }
+    @media screen and (max-width: $md-3) {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 16px;
+    }
+  }
+
+  &__platforms {
+    margin-top: 74px;
+    @media screen and (max-width: $md-4) {
+      margin-top: 45px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 35px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 25px;
+    }
+  }
+
+  &__image {
+    flex: 0 1 900px;
+    margin-right: -266px;
+
+    @media screen and (max-width: $md-3) {
+      flex: 0 1 auto;
+      margin-right: 0px;
+      padding: 0px 40px;
+      position: relative;
+      z-index: 1;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 150px;
+        width: 115%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-purple;
+        z-index: -1;
+
+        @media screen and (max-width: $md-2) {
+          height: 100px;
+        }
+      }
+    }
+    @media screen and (max-width: 600px) {
+      padding: 0px 20px;
+    }
+    @media screen and (max-width: $md-2) {
+      display: none;
+    }
+    & img {
+      width: 100%;
+      @media screen and (max-width: $md-3) {
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        border-radius: 2%;
+      }
     }
   }
 }

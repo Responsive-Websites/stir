@@ -78,6 +78,13 @@ main {
       color: $color-purple;
     }
   }
+  &_yellow {
+    background-color: $color-white-sub;
+    & p {
+      font-weight: 700;
+      color: $color-grey;
+    }
+  }
 }
 
 .heading-type {
@@ -113,6 +120,11 @@ main {
       color: $color-purple;
       max-width: 336px;
     }
+    &_yellow {
+      color: $color-yellow;
+      font-weight: 700;
+      max-width: 342px;
+    }
   }
 
   &__title {
@@ -144,6 +156,9 @@ main {
       margin-left: auto;
       margin-right: auto;
       color: $color-white;
+    }
+    &_bold {
+      font-weight: 700;
     }
   }
 }
@@ -404,5 +419,83 @@ main {
     @media screen and (max-width: $md-2) {
       font-size: 18px;
     }
+  }
+}
+
+//support platforms list
+.platforms-support {
+  &__title {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: $color-yellow;
+
+    @media screen and (max-width: $md-3) {
+      text-align: center;
+    }
+  }
+
+  &__items {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -5px;
+    margin-right: -5px;
+    @media screen and (max-width: $md-4) {
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @media screen and (max-width: $md-3) {
+      justify-content: center;
+      max-width: 600px;
+      margin: 22px auto 0 auto;
+    }
+  }
+
+  &__item {
+    border: 1px solid #ededed;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 6px 18px 6px 6px;
+
+    @media screen and (min-width: $md-4) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (max-width: $md-4) {
+      margin: 10px 5px;
+    }
+
+    transition: all 0.3s ease 0s;
+
+    @media screen and (min-width: $md-2) {
+      &:hover {
+        background-color: $color-green;
+        border-color: $color-white;
+
+        & .platforms-support__label {
+          // color: $color-grey;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    max-width: 24px;
+    margin-right: 10px;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    font-size: 17px;
+    line-height: 140%;
   }
 }
