@@ -307,3 +307,9 @@ let swiperCommunity = new Swiper('.community__slider', {
     prevEl: '.slider-community__control-preview',
   },
 });
+
+let swiperTeam = new Swiper('.team__slider', {
+  speed: 600,
+
+  slidesPerView: 1,
+});
