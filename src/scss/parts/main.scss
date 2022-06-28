@@ -115,6 +115,9 @@
       margin-top: -60px;
     }
   }
+  &__secure {
+    background-color: $color-font-black;
+  }
 }
 
 //preview
@@ -1350,14 +1353,191 @@
     line-height: 120%;
     text-align: center;
     @media screen and (max-width: $md-4) {
+      font-size: 38px;
     }
     @media screen and (max-width: $md-3) {
+      font-size: 32px;
     }
     @media screen and (max-width: $md-2) {
+      font-size: 24px;
     }
   }
 
   &__slider {
     margin-top: 212px;
+    @media screen and (max-width: $md-4) {
+      margin-top: 160px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 90px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 60px;
+    }
+  }
+}
+
+//secure
+.secure {
+  &__container {
+    padding: 302px 15px 212px 15px;
+    @media screen and (max-width: $md-4) {
+      padding: 230px 15px 160px 15px;
+    }
+    @media screen and (max-width: $md-3) {
+      padding: 160px 15px 80px 15px;
+    }
+    @media screen and (max-width: $md-2) {
+      padding: 80px 15px 80px 15px;
+    }
+  }
+  &__sub-inner {
+    max-width: $container-size-secure;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 508px;
+      height: 100%;
+      background: url('../../img/security/background.png') center / 100% repeat;
+      z-index: -1;
+      @media screen and (max-width: 1133px) {
+        left: -130px;
+      }
+      @media screen and (max-width: $md-4) {
+        left: -230px;
+      }
+      @media screen and (max-width: 940px) {
+        left: 0;
+        background: url('../../img/security/background-oppacity.png') center / 100% repeat;
+        opacity: 0.15;
+      }
+      @media screen and (max-width: $md-2) {
+        left: 0px;
+        background-size: 100%;
+        width: 254px;
+      }
+
+      animation-name: decor-secure-slide;
+      animation-duration: 1000s;
+      animation-iteration-count: infinite;
+      @keyframes decor-secure-slide {
+        0% {
+          background-position: center 0%;
+        }
+
+        100% {
+          background-position: center -10000px;
+        }
+      }
+    }
+  }
+  &__inner {
+    color: $color-white;
+    max-width: 598px;
+    margin: 0px 0px 0px auto;
+
+    @media screen and (max-width: $md-3) {
+      margin: 0px auto;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-orange;
+    @media screen and (max-width: $md-4) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 14px;
+    }
+  }
+
+  &__title {
+    margin-top: 14px;
+    font-size: 40px;
+    line-height: 120%;
+    max-width: 482px;
+    @media screen and (max-width: $md-4) {
+      font-size: 32px;
+      margin-top: 12px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 28px;
+      max-width: 340px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 10px;
+      font-size: 24px;
+      max-width: 300px;
+    }
+  }
+
+  &__list {
+    margin-top: 144px;
+    @media screen and (max-width: $md-4) {
+      margin-top: 100px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 60px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 50px;
+    }
+  }
+
+  &__list-item {
+    font-size: 20px;
+    line-height: 140%;
+    padding-left: 36px;
+
+    transition: all 0.5s ease 0s;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    background: url('../../img/security/icon/ok-icon.svg') left 6px / 23px no-repeat;
+
+    &:hover {
+      padding-left: 30px;
+
+      @media screen and (max-width: $md-4) {
+        padding-left: 26px;
+      }
+      @media screen and (max-width: $md-3) {
+        padding-left: 24px;
+      }
+      @media screen and (max-width: $md-2) {
+        padding-left: 24px;
+      }
+    }
+
+    @media screen and (max-width: $md-4) {
+      font-size: 18px;
+      background-size: 20px;
+      padding-left: 30px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 16px;
+      background-size: 18px;
+      padding-left: 28px;
+      background-position: left 4px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 14px;
+      background-size: 16px;
+      padding-left: 24px;
+      background-position: left 2px;
+    }
   }
 }

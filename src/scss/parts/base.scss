@@ -10,6 +10,8 @@ body {
   margin: 0 auto;
   padding: 0px 15px;
   box-sizing: content-box;
+
+  //1224px - main container size
 }
 .wrapper {
   min-height: 100%;
@@ -509,6 +511,7 @@ main {
 
 //team slider
 .slider-team {
+  border-radius: 8px;
   &__inner {
     &.swiper-wrapper {
       align-items: stretch;
@@ -521,33 +524,216 @@ main {
 
     display: flex;
     align-items: flex-start;
-    padding: 52px 42px 52px 30px;
+    padding: 48px 42px 48px 30px;
 
+    @media screen and (max-width: 1130px) {
+      padding: 38px 32px 38px 32px;
+    }
+    @media screen and (max-width: $md-4) {
+      padding: 24px 20px;
+    }
+    @media screen and (max-width: $md-3) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & .slider-team__photo {
+        margin-left: 50px;
+        transition: all 0.5s ease 0s;
+      }
+      & .slider-team__content {
+        margin-left: 50px;
+        transition: all 0.5s ease 0s;
+      }
+    }
+
+    @media screen and (max-width: $md-2) {
+      padding: 15px 15px;
+    }
+
+    &:nth-child(1) {
+      @media screen and (max-width: $md-3) {
+        & .slider-team__photo {
+          background-position: top;
+        }
+      }
+    }
     &:nth-child(2) {
       background-color: $color-yellow;
+
+      & .slider-team__label {
+        border: 1px solid $color-orange;
+      }
+      & .slider-team__name-value {
+        color: $color-grey;
+        top: 32px;
+
+        @media screen and (max-width: $md-3) {
+          top: auto;
+          bottom: 16px;
+        }
+      }
     }
     &:nth-child(3) {
       background-color: $color-green;
+
+      & .slider-team__label {
+        border: 1px solid $color-purple;
+      }
+      & .slider-team__name-value {
+        color: $color-black-sub;
+        top: 32px;
+        @media screen and (max-width: $md-3) {
+          top: 16px;
+        }
+      }
+    }
+    &:nth-child(4) {
+      background-color: $color-purple;
+
+      & .slider-team__label {
+        border: 1px solid $color-grey;
+      }
+      & .slider-team__label-value {
+        color: $color-grey-sub;
+      }
+      & .slider-team__name-value {
+        color: $color-grey-sub;
+        bottom: 32px;
+        @media screen and (max-width: $md-3) {
+          bottom: 16px;
+        }
+      }
+      & .slider-team__info-item {
+        border-bottom: 1px solid $color-grey;
+      }
+      & .slider-team__info {
+        color: $color-grey-sub;
+      }
+    }
+    &:last-child {
+      & .slider-team__content {
+        flex: 0 1 100%;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-start;
+
+        height: 100%;
+        @media screen and (max-width: 1130px) {
+          flex: 0 1 100%;
+        }
+        @media screen and (max-width: $md-4) {
+          flex: 0 1 100%;
+        }
+        @media screen and (max-width: $md-3) {
+          flex: 0 1 auto;
+          width: 100%;
+        }
+      }
+      & .slider-team__quote {
+        max-width: none;
+
+        @media screen and (max-width: 1130px) {
+          max-width: none;
+        }
+      }
+      & .slider-team__info {
+        max-width: none;
+        width: 100%;
+      }
+      & .slider-team__photo {
+        flex: 0 0 450px;
+
+        @media screen and (max-width: $md-4) {
+          flex: 0 0 300px;
+        }
+        @media screen and (max-width: $md-3) {
+          flex: 0 1 auto;
+          width: 100%;
+        }
+      }
+      & .slider-team__order {
+        @media screen and (max-width: $md-3) {
+          width: 100%;
+        }
+      }
     }
     transition: all 0.5s ease 0s;
     &.swiper-slide-next {
       transition: all 0.5s ease 0s;
       margin-left: -150px;
+      cursor: pointer;
+      @media screen and (max-width: $main-container-size-mod) {
+        margin-left: -100px;
+      }
+      @media screen and (max-width: 1130px) {
+        margin-left: -74px;
+      }
+      @media screen and (max-width: 800px) {
+        margin-left: -52px;
+      }
+      @media screen and (max-width: $md-3) {
+        margin-left: -66px;
+      }
+      @media screen and (max-width: 516px) {
+        margin-left: -58px;
+      }
+      @media screen and (max-width: $md-2) {
+        margin-left: -48px;
+      }
     }
     &.swiper-slide-active {
       transition: all 0.5s ease 0s;
+
+      @media screen and (max-width: $md-3) {
+        & .slider-team__photo {
+          margin-left: 0px;
+        }
+        & .slider-team__content {
+          margin-left: 0px;
+        }
+      }
+    }
+    &.swiper-slide {
+      height: auto;
     }
   }
 
   &__order {
     margin-right: 30px;
-    // flex: 0 1 17px;
+    flex: 0 1 17px;
     position: relative;
+    @media screen and (max-width: $md-4) {
+      margin-right: 20px;
+      margin-top: 40px;
+    }
+    @media screen and (max-width: $md-3) {
+      flex: 0 1 auto;
+      margin-top: 0px;
+      margin-right: 0px;
+      display: flex;
+      align-items: center;
+      flex-flow: row nowrap;
+
+      width: 88%;
+    }
+    @media screen and (max-width: 430px) {
+      width: 80%;
+    }
   }
 
   &__number {
     font-size: 14px;
     line-height: 100%;
+    @media screen and (max-width: $md-3) {
+      font-size: 26px;
+      margin-right: 16px;
+    }
+    @media screen and (max-width: 516px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 16px;
+    }
   }
 
   &__profession {
@@ -555,9 +741,22 @@ main {
     font-size: 14px;
     line-height: 100%;
     position: absolute;
-    top: 45px;
-    left: -15px;
-    transform: rotate(-90deg);
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, 0px) rotate(-90deg);
+    @media screen and (max-width: $md-4) {
+      top: 45px;
+    }
+    @media screen and (max-width: $md-3) {
+      position: static;
+      transform: none;
+      font-size: 16px;
+      flex: 1 1 auto;
+      margin-right: 10px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 14px;
+    }
   }
 
   &__photo {
@@ -574,6 +773,26 @@ main {
       top: 0;
       left: 0;
     }
+    @media screen and (max-width: 1130px) {
+      padding-bottom: 55%;
+      margin-right: 20px;
+    }
+    @media screen and (max-width: $md-4) {
+      flex: 0 1 300px;
+    }
+    @media screen and (max-width: $md-3) {
+      flex: 0 1 auto;
+      margin-right: 0px;
+      padding-bottom: 50%;
+      width: 88%;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 430px) {
+      width: 80%;
+    }
   }
 
   &__name-value {
@@ -583,10 +802,44 @@ main {
     font-size: 24px;
     line-height: 150%;
     color: $color-white;
+    @media screen and (max-width: 1130px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $md-3) {
+      left: 20px;
+      bottom: 16px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 16px;
+    }
   }
 
   &__content {
     flex: 0 1 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: 100%;
+    @media screen and (max-width: 1130px) {
+      flex: 0 1 340px;
+    }
+    @media screen and (max-width: $md-4) {
+      flex: 0 1 380px;
+    }
+    @media screen and (max-width: 896px) {
+      flex: 0 1 300px;
+    }
+    @media screen and (max-width: 798px) {
+      flex: 0 1 280px;
+    }
+    @media screen and (max-width: $md-3) {
+      flex: 0 1 auto;
+      width: 88%;
+    }
+    @media screen and (max-width: 430px) {
+      width: 80%;
+    }
   }
 
   &__label {
@@ -594,25 +847,60 @@ main {
     border-radius: 56px;
     display: inline-block;
     padding: 10px 13px 10px 13px;
+    @media screen and (max-width: 430px) {
+      padding: 5px 10px 5px 10px;
+    }
   }
 
   &__label-value {
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
+    text-align: center;
+    @media screen and (max-width: $md-2) {
+      font-size: 10px;
+    }
   }
 
   &__quote {
-    margin-top: 53px;
+    margin-top: 50px;
     font-weight: 700;
     font-size: 24px;
     line-height: 150%;
     max-width: 382px;
+
+    @media screen and (max-width: 1130px) {
+      font-size: 18px;
+      max-width: 300px;
+      margin-top: 30px;
+    }
+    flex: 1 1 100%;
+
+    @media screen and (max-width: $md-4) {
+      max-width: none;
+      width: 100%;
+      font-size: 16px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 14px;
+    }
   }
 
   &__info {
     margin-top: 106px;
     max-width: 400px;
+    width: 100%;
+    @media screen and (max-width: 1130px) {
+      margin-top: 50px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 30px;
+      max-width: none;
+      width: 100%;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 20px;
+    }
   }
 
   &__info-item {
@@ -625,16 +913,34 @@ main {
     justify-items: left;
     column-gap: 20px;
     // grid-auto-rows: minmax(42px, auto);
+
+    @media screen and (max-width: $md-3) {
+      &:last-child {
+        border: none;
+      }
+    }
+    @media screen and (max-width: 430px) {
+      column-gap: 10px;
+    }
   }
 
   &__info-channels {
     font-size: 14px;
     font-weight: 700;
+    @media screen and (max-width: $md-2) {
+      font-size: 12px;
+    }
   }
 
   &__info-activity {
     font-size: 14px;
     font-weight: 700;
+    @media screen and (max-width: $md-2) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 430px) {
+      justify-self: right;
+    }
   }
 
   &__info-value {
@@ -648,15 +954,28 @@ main {
     & img {
       width: 100%;
     }
+    @media screen and (max-width: 430px) {
+      margin-right: 5px;
+      max-width: 12px;
+    }
   }
 
   &__info-name {
     font-size: 14px;
     line-height: 100%;
+    @media screen and (max-width: $md-2) {
+      font-size: 12px;
+    }
   }
 
   &__info-type {
     font-size: 14px;
     line-height: 100%;
+    @media screen and (max-width: $md-2) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 430px) {
+      justify-self: right;
+    }
   }
 }
