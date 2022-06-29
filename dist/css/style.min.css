@@ -3134,23 +3134,56 @@ main {
 }
 .creators__slider-container {
   max-width: 1358px;
+  padding: 0px 15px;
+  box-sizing: content-box;
   margin: 170px auto 0px auto;
 }
 .creators__slider {
   display: flex;
 }
 .creators__slide {
-  flex: 0 1 33.333%;
+  flex: 0 1 410px;
   position: relative;
+  overflow: hidden;
+}
+.creators__slide::before {
+  transition: all 0.5s ease 0s;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+@media screen and (min-width: 480px) {
+  .creators__slide:hover::before {
+    width: 95%;
+    height: 95%;
+  }
+  .creators__slide:hover .creators__slide-decor {
+    transform: scale(0.8) translate(-60%, -60%);
+  }
+  .creators__slide:hover .creators__image {
+    transform: scale(1.1);
+  }
 }
 .creators__image {
-  padding-bottom: 40%;
+  padding-bottom: 136.6%;
+  transition: all 0.5s ease 0s;
 }
 .creators__slide-decor {
+  transition: all 0.5s ease 0s;
   font-size: 64px;
   line-height: 106%;
   color: #ffffff;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
 }
