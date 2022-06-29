@@ -131,6 +131,19 @@
       padding: 60px 0px;
     }
   }
+  &__creators {
+    background-color: $color-font-black;
+    padding: 180px 0px 284px 0px;
+    @media screen and (max-width: $md-4) {
+      padding: 160px 0px 240px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      padding: 120px 0px 140px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      padding: 60px 0px 80px 0px;
+    }
+  }
 }
 
 //preview
@@ -1564,5 +1577,118 @@
 
   &__content {
     margin-top: 24px;
+  }
+}
+
+//creators
+.creators {
+  &__container {
+  }
+
+  &__content {
+  }
+
+  &__label {
+    border: 1px solid $color-green;
+    border-radius: 58px;
+    display: inline-flex;
+    min-width: 64px;
+    min-height: 28px;
+
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 8px 13px;
+  }
+
+  &__label-value {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    color: $color-white;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 106%;
+    max-width: 624px;
+    color: $color-white;
+    margin-top: 30px;
+
+    @media screen and (max-width: $md-4) {
+      font-size: 58px;
+      margin-top: 26px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 48px;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 40px;
+      margin-top: 16px;
+    }
+  }
+
+  &__text {
+    margin-top: 42px;
+    max-width: 567px;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-white;
+
+    @media screen and (max-width: $md-3) {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  }
+
+  &__button {
+    @include button-main(
+      $color-white,
+      $color-font-black,
+      $color-white,
+      $color-font-black,
+      $color-white,
+      $color-font-black
+    );
+    margin-top: 32px;
+    min-width: 360px;
+
+    @media screen and (max-width: 568px) {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &__slider-container {
+    max-width: $main-container-size-sub;
+    margin: 170px auto 0px auto;
+  }
+
+  &__slider {
+    display: flex;
+  }
+
+  &__slide {
+    flex: 0 1 33.333%;
+    position: relative;
+  }
+
+  &__image {
+    padding-bottom: 40%;
+  }
+
+  &__slide-decor {
+    font-size: 64px;
+    line-height: 106%;
+    color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
