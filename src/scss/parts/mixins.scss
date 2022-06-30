@@ -1,3 +1,6 @@
+//buttons
+
+//main button
 @mixin button-main(
   $color,
   $color-background,
@@ -31,5 +34,20 @@
         color: $color-hover;
       }
     }
+  }
+}
+
+//font
+
+//adaptive font size
+@mixin adaptive-font-size($desctopSize, $mobileSize, $maxWidth) {
+  $addSize: $desctopSize - $mobileSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media screen and (max-width: $md-3) {
+    font-size: calc(#{$mobileSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+  @media screen and (min-width: $md-3) {
+    font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
   }
 }

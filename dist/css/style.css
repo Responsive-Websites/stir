@@ -3138,11 +3138,10 @@ main {
   box-sizing: content-box;
   margin: 170px auto 0px auto;
 }
-.creators__slider {
+.creators__slider-inner {
   display: flex;
 }
 .creators__slide {
-  flex: 0 1 410px;
   position: relative;
   overflow: hidden;
 }
@@ -3177,7 +3176,6 @@ main {
 }
 .creators__slide-decor {
   transition: all 0.5s ease 0s;
-  font-size: 64px;
   line-height: 106%;
   color: #ffffff;
   position: absolute;
@@ -3186,4 +3184,19 @@ main {
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .creators__slide-decor {
+    font-size: calc(10px + 91.8 * ((100vw - 320px) / 1388));
+  }
+}
+@media screen and (min-width: 768px) {
+  .creators__slide-decor {
+    font-size: calc(10px + 54 * (100vw / 1388));
+  }
+}
+@media screen and (min-width: 1388px) {
+  .creators__slide-decor {
+    font-size: 64px;
+  }
 }

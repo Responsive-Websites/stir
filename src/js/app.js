@@ -323,16 +323,20 @@ let swiperTeam = new Swiper('.team__slider', {
   },
 });
 
-let swiperCreators = new Swiper('.creators__slider-container', {
+let swiperCreators = new Swiper('.creators__slider', {
   speed: 700,
   // slideToClickedSlide: true,
   slidesPerView: 3,
   loop: true,
-  spaceBetween: 64,
+  spaceBetween: 44,
+  // centeredSlides: true,
+  // centeredSlidesBounds: true,
   // autoplay: {
   //   delay: 6000,
   //   disableOnInteraction: true,
   // },
+  observer: true,
+  observeParents: true,
   breakpoints: {
     480: {
       grabCursor: true,

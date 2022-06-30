@@ -1671,14 +1671,15 @@
     box-sizing: content-box;
     margin: 170px auto 0px auto;
   }
-
   &__slider {
+    &.swiper {
+    }
+  }
+  &__slider-inner {
     display: flex;
   }
 
   &__slide {
-    // flex: 0 1 33.333%;
-    flex: 0 1 410px;
     position: relative;
 
     overflow: hidden;
@@ -1719,7 +1720,6 @@
 
   &__slide-decor {
     transition: all 0.5s ease 0s;
-    font-size: 64px;
     line-height: 106%;
     color: $color-white;
     position: absolute;
@@ -1728,5 +1728,11 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
+
+    @include adaptive-font-size(64, 10, 1388);
+
+    @media screen and (min-width: 1388px) {
+      font-size: 64px;
+    }
   }
 }
