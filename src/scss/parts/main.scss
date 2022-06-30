@@ -1689,8 +1689,9 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 90%;
-      height: 90%;
+      width: 88.8%;
+      height: 88.8%;
+
       border: 2px solid $color-white;
       border-radius: 4px;
       transform: translate(-50%, -50%);
@@ -1728,11 +1729,12 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
+    padding: 0px 30px;
 
-    @include adaptive-font-size(64, 10, 1388);
+    @include adaptive-font-size(56, 10, 1388);
 
     @media screen and (min-width: 1388px) {
-      font-size: 64px;
+      font-size: 56px;
     }
   }
 }

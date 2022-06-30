@@ -326,9 +326,9 @@ let swiperTeam = new Swiper('.team__slider', {
 let swiperCreators = new Swiper('.creators__slider', {
   speed: 700,
   // slideToClickedSlide: true,
-  slidesPerView: 3,
+
   loop: true,
-  spaceBetween: 44,
+
   // centeredSlides: true,
   // centeredSlidesBounds: true,
   // autoplay: {
@@ -338,8 +338,24 @@ let swiperCreators = new Swiper('.creators__slider', {
   observer: true,
   observeParents: true,
   breakpoints: {
+    1200: {
+      spaceBetween: 64,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    768: {},
+    640: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
     480: {
       grabCursor: true,
+    },
+    320: {
+      spaceBetween: 10,
+      slidesPerView: 1,
     },
   },
 });
