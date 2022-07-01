@@ -1122,3 +1122,126 @@ main {
     }
   }
 }
+
+//subscribe form
+
+.subscribe-form {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  display: flex;
+  padding: 10px 5px 10px 20px;
+  @media screen and (max-width: $md-2) {
+    align-items: center;
+    padding: 5px 5px 5px 20px;
+  }
+  &__label {
+    color: $color-white;
+    font-size: 13px;
+    line-height: 215%;
+    text-align: center;
+    margin-right: 10px;
+    flex: 0 0 auto;
+    @media screen and (max-width: $md-2) {
+      margin-right: 0px;
+      font-size: 20px;
+    }
+  }
+
+  &__input {
+    flex: 1 1 100%;
+    color: $color-white;
+    background-color: $color-purple;
+    font-size: 13px;
+    line-height: 215%;
+    @media screen and (max-width: $md-2) {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    padding: 0px 10px;
+    color: $color-white;
+    background-color: $color-purple;
+    font-size: 13px;
+    line-height: 215%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $md-2) {
+      padding: 5px 20px;
+      font-size: 16px;
+    }
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: transparent;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: transparent;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: transparent;
+  }
+
+  @media screen and (max-width: $md-2) {
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $color-white;
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $color-white;
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $color-white;
+    }
+  }
+}
+
+//social items
+
+.social-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0px -10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px 20px 10px;
+    &:not(:last-child) {
+    }
+
+    @media screen and (min-width: $md-2) {
+      &:hover {
+        & .social-items__name {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 4px;
+    width: 21px;
+  }
+
+  &__name {
+    transition: all 0.5s ease 0s;
+    font-size: 14px;
+    line-height: 160%;
+    color: $color-white;
+    opacity: 0.5;
+  }
+}

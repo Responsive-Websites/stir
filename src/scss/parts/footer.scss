@@ -1,1 +1,161 @@
-//footer
+.footer {
+  background-color: $color-purple;
+  &__container {
+  }
+
+  &__inner {
+    padding: 80px 0px 60px 0px;
+    @media screen and (max-width: $md-4) {
+      padding: 60px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      padding: 50px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      padding: 40px 0px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media screen and (max-width: $md-2) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    flex: 0 1 360px;
+    margin-right: 20px;
+    @media screen and (max-width: 510px) {
+      margin-right: 10px;
+    }
+    @media screen and (max-width: $md-2) {
+      flex: 0 1 auto;
+      margin-top: 30px;
+      margin-right: 0px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 150%;
+    color: $color-white;
+    max-width: 230px;
+
+    @media screen and (max-width: $md-4) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $md-2) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    margin-top: 15px;
+    @media screen and (max-width: $md-2) {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+
+  &__logo {
+    flex: 0 1 104px;
+
+    max-height: 45px;
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: $md-3) {
+      flex: 0 1 80px;
+    }
+    @media screen and (max-width: 510px) {
+      flex: 0 1 60px;
+    }
+    @media screen and (max-width: $md-2) {
+      flex: 0 1 auto;
+      max-width: 80px;
+    }
+  }
+
+  &__sources {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $md-4) {
+      margin-top: 80px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-top: 60px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 40px;
+      display: block;
+    }
+  }
+
+  &__social {
+    flex: 0 1 50%;
+    margin-right: 20px;
+
+    @media screen and (max-width: 510px) {
+      margin-right: 10px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-right: 0px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+  }
+
+  &__rights {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    color: $color-white;
+
+    & a {
+      margin-right: 24px;
+      font-size: 14px;
+      line-height: 160%;
+      transition: all 0.5s ease 0s;
+      font-weight: 400;
+      color: $color-white;
+      opacity: 0.5;
+      @media screen and (min-width: $md-2) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    @media screen and (max-width: $md-2) {
+      margin-top: 30px;
+      justify-content: center;
+    }
+  }
+
+  &__terms {
+  }
+
+  &__privacy {
+  }
+
+  &__signature {
+    font-weight: 700;
+    line-height: 140%;
+  }
+}
