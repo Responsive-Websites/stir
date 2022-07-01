@@ -338,24 +338,28 @@ let swiperCreators = new Swiper('.creators__slider', {
   observer: true,
   observeParents: true,
   breakpoints: {
-    1200: {
-      spaceBetween: 64,
+    480: {
+      grabCursor: true,
+      spaceBetween: 0,
+      slidesPerView: 1,
     },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    768: {},
+
     640: {
       spaceBetween: 20,
       slidesPerView: 2,
     },
-    480: {
-      grabCursor: true,
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
     },
-    320: {
-      spaceBetween: 10,
-      slidesPerView: 1,
+    1200: {
+      spaceBetween: 64,
+      slidesPerView: 3,
     },
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,
   },
 });
