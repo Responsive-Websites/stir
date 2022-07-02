@@ -1,6 +1,37 @@
 //main
 .main {
   background-color: $color-white;
+
+  //nav =================
+
+  &__desktop-nav {
+    display: none;
+    position: fixed;
+
+    top: 50%;
+    left: -20px;
+    transform: translate(0%, -50%);
+    padding-right: 60px;
+    padding-left: 20px;
+    z-index: 10;
+    transition: all 0.5s ease 0s;
+    @media screen and (min-width: $md-3) {
+      display: block;
+      &:hover {
+        left: -18px;
+
+        & .nav-descktop {
+          padding: 8px;
+        }
+        & .nav-descktop__item {
+          width: 20px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  // ====================
   &__preview {
     padding-top: 114px;
     background-color: $color-white;

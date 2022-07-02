@@ -39,15 +39,16 @@ revenueHelp.addEventListener('scroll', event);
 // revenueHelp.addEventListener('click', function (e) {
 //   revenueHelp.classList.remove('_revenue-breakdown-mobile');
 // });
+
 // burger
 
-// let header_menu = document.querySelector('.menu__body');
-// let burger_icon = document.querySelector('.icon-menu');
-// burger_icon.addEventListener('click', function (e) {
-//   header_menu.classList.toggle('_active');
-//   burger_icon.classList.toggle('_active');
-//   document.body.classList.toggle('_lock');
-// });
+let header_menu = document.querySelector('.menu__list');
+let burger_icon = document.querySelector('.menu__icon');
+burger_icon.addEventListener('click', function (e) {
+  header_menu.classList.toggle('_active');
+  burger_icon.classList.toggle('_active');
+  document.body.classList.toggle('_lock');
+});
 
 // =========================================================
 
@@ -69,33 +70,27 @@ ibg();
 // smooth scroll
 // data-goto=".main-slider"
 
-// const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-// if (menuLinks.length > 0) {
-//   menuLinks.forEach((menuLink) => {
-//     menuLink.addEventListener('click', onMenuLinkClick);
-//   });
+const menuLinks = document.querySelectorAll('.nav-descktop__item[data-goto]');
+if (menuLinks.length > 0) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener('click', onMenuLinkClick);
+  });
 
-//   function onMenuLinkClick(e) {
-//     const menuLink = e.target;
-//     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-//       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//       const gotoBlockValue =
-//         gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue =
+        gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
-//       if (burger_icon.classList.contains('_active')) {
-//         document.body.classList.remove('_lock');
-//         burger_icon.classList.remove('_active');
-//         header_menu.classList.remove('_active');
-//       }
-
-//       window.scrollTo({
-//         top: gotoBlockValue,
-//         behavior: 'smooth',
-//       });
-//       e.preventDefault();
-//     }
-//   }
-// }
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth',
+      });
+      e.preventDefault();
+    }
+  }
+}
 
 // =========================================================
 
