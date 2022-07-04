@@ -1,6 +1,13 @@
 //header
 .header {
   background-color: $color-white;
+  @media screen and (max-width: $md-3) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
   &__container {
   }
 
@@ -9,10 +16,27 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 0px;
+
+    @media screen and (max-width: $md-3) {
+      padding: 12px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      padding: 8px 0px;
+    }
   }
 
   &__logo {
     flex: 0 1 50%;
+    @media screen and (max-width: $md-3) {
+      & svg {
+        width: 60px;
+      }
+    }
+    @media screen and (max-width: $md-2) {
+      & svg {
+        width: 50px;
+      }
+    }
   }
 
   &__join {
@@ -78,23 +102,24 @@
     &._active::before {
       top: 50%;
       transform: rotate(-45deg) translate(0px, -50%);
-      background-color: $color-purple;
+      background-color: $color-white;
     }
     &._active::after {
       bottom: 50%;
       transform: rotate(45deg) translate(0px, 50%);
-      background-color: $color-purple;
+      background-color: $color-white;
     }
   }
 
   &__list {
     position: fixed;
-    top: -1000%;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 50;
-    background-color: $color-white;
+    // background-color: $color-white;
+    background: url('../../img/burger/burger-background.svg') center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -114,7 +139,7 @@
   }
 
   &__link {
-    color: $color-font-black;
+    color: $color-white;
     font-size: 20px;
     line-height: 100%;
   }

@@ -564,7 +564,7 @@ main {
       }
     }
     &:nth-child(2) {
-      background-color: $color-yellow;
+      background-color: #e7b322;
 
       & .slider-team__label {
         border: 1px solid $color-orange;
@@ -594,8 +594,14 @@ main {
       }
     }
     &:nth-child(4) {
-      background-color: $color-purple;
+      background-color: #4267b2;
 
+      & .slider-team__order {
+        color: $color-white-sub;
+      }
+      & .slider-team__quote {
+        color: $color-white-sub;
+      }
       & .slider-team__label {
         border: 1px solid $color-grey;
       }
@@ -611,6 +617,11 @@ main {
       }
       & .slider-team__info-item {
         border-bottom: 1px solid $color-grey;
+        @media screen and (max-width: $md-3) {
+          &:last-child {
+            border: none;
+          }
+        }
       }
       & .slider-team__info {
         color: $color-grey-sub;
