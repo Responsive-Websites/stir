@@ -3,7 +3,6 @@
   background-color: $color-white;
 
   //nav =================
-
   &__desktop-nav {
     display: none;
     position: fixed;
@@ -30,8 +29,24 @@
       }
     }
   }
-
   // ====================
+
+  //popup ===============
+  &__join-popup {
+    position: fixed;
+    z-index: 50;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    transition: all 0.5s ease 0s;
+    transform-origin: 0 0;
+    &._active {
+      transform: scale(1) translate(-50%, -50%);
+    }
+    @media screen and (max-width: $md-2) {
+    }
+  }
+  //=====================
   &__preview {
     padding-top: 114px;
     background-color: $color-white;
@@ -1022,7 +1037,7 @@
       transform: translate(-80%, -50%);
       width: 80px;
       height: 80px;
-      background: url('../../img/organized/icons/touch-icon.svg') center no-repeat;
+      background: url('../img/organized/icons/touch-icon.svg') center no-repeat;
 
       animation-name: mobile-help-touch;
       animation-duration: 3s;
@@ -1217,7 +1232,7 @@
 
   &__heading {
     padding-bottom: 55px;
-    background: url('../../img/splits/icons/arrows-back.svg') bottom center / 100% no-repeat;
+    background: url('../img/splits/icons/arrows-back.svg') bottom center / 100% no-repeat;
 
     transition: all 0.5s ease 0s;
 
@@ -1463,7 +1478,7 @@
       left: 0;
       width: 508px;
       height: 100%;
-      background: url('../../img/security/background.png') 0 0 / 508px 920px repeat;
+      background: url('../img/security/background.png') 0 0 / 508px 920px repeat;
       z-index: -1;
       @media screen and (max-width: 1133px) {
         left: -130px;
@@ -1473,7 +1488,7 @@
       }
       @media screen and (max-width: 940px) {
         left: 0;
-        background-image: url('../../img/security/background-oppacity.png');
+        background-image: url('../img/security/background-oppacity.png');
         opacity: 0.15;
       }
       @media screen and (max-width: $md-2) {
@@ -1556,7 +1571,7 @@
     &:not(:last-child) {
       margin-bottom: 12px;
     }
-    background: url('../../img/security/icon/ok-icon.svg') left 6px / 23px no-repeat;
+    background: url('../img/security/icon/ok-icon.svg') left 6px / 23px no-repeat;
 
     &:hover {
       padding-left: 30px;

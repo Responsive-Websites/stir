@@ -46,12 +46,44 @@ let header_menu = document.querySelector('.menu__list');
 let burger_icon = document.querySelector('.menu__icon');
 burger_icon.addEventListener('click', function (e) {
   header_menu.classList.toggle('_active');
+  join_popup.classList.remove('_active');
   burger_icon.classList.toggle('_active');
   document.body.classList.toggle('_lock');
 });
 
 // =========================================================
 
+// popup button
+document.documentElement.addEventListener('click', function (e) {
+  if (
+    !e.target.closest('.join-popup') &&
+    !e.target.closest('._join-button') &&
+    !e.target.closest('.info-map__work-link') &&
+    !e.target.closest('.creators__button')
+  ) {
+    join_popup.classList.remove('_active');
+  }
+});
+let payment_button = document.querySelector('.info-map__work-link');
+let creators_button = document.querySelector('.creators__button');
+
+let join_button = document.querySelector('._join-button');
+let join_popup = document.querySelector('.join-popup');
+let close_popup = document.querySelector('.join-popup__close');
+close_popup.addEventListener('click', function (e) {
+  join_popup.classList.remove('_active');
+});
+join_button.addEventListener('click', function (e) {
+  join_popup.classList.toggle('_active');
+});
+payment_button.addEventListener('click', function (e) {
+  join_popup.classList.toggle('_active');
+});
+creators_button.addEventListener('click', function (e) {
+  join_popup.classList.toggle('_active');
+});
+
+// =========================================================
 // ibg
 
 function ibg() {
